@@ -1,9 +1,9 @@
-import { ButtonPrimary } from "../Buttons";
+import { ButtonColor, ButtonPrimary } from "../Buttons";
 
 export const Subscribe = () => {
   return (
-    <div className="relative flex flex-col mx-2 sm:mx-auto my-24 p-8 justify-center items-start max-w-3xl rounded-xl border p-5">
-      <span className="rounded-br-3xl rounded-bl-3xl absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+    <div className="relative flex flex-col mx-2 sm:mx-auto my-24 p-8 justify-center items-start max-w-3xl rounded-xl border">
+      <span className="rounded-br-xl rounded-bl-xl absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
       <span className="uppercase font-semibold text-slate-500 tracking-widest">
         Subscribe
       </span>
@@ -18,7 +18,7 @@ export const Subscribe = () => {
           name="email"
           placeholder="john@example.com"
         />
-        <ButtonPrimary onClick={() => console.log("test")}>
+        <ButtonPrimary isSubmit={true} color={ButtonColor.TEAL} onClick={() => console.log("test")}>
           Subscribe
         </ButtonPrimary>
       </form>
