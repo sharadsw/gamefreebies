@@ -1,15 +1,14 @@
-import Image from "next/image";
-import logo from "../public/logo.png";
+import Logo from "./Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="w-full flex flex-col items-center">
       <hr className="w-11/12 h-0 bg-slate-400" />
       <div className="my-8 w-11/12 flex justify-between">
         <div>
-          <Image src={logo} alt="freebies" width={100} height={200} />
+          <Logo />
           <span>freebies.gg © {new Date().getFullYear()}</span>
         </div>
         <span>
@@ -23,4 +22,6 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}
+
+export default Footer;

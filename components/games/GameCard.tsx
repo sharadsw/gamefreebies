@@ -7,7 +7,7 @@ import { FunctionComponent } from "react";
 const epochToHours = (epoch: number) =>
   Math.floor((Date.now() * 0.001 - epoch) / 3600);
 
-export const GameCard: FunctionComponent<GameCardProps> = ({
+const GameCard: FunctionComponent<GameCardProps> = ({
   title,
   source,
   url,
@@ -16,7 +16,7 @@ export const GameCard: FunctionComponent<GameCardProps> = ({
   img,
 }) => {
   const hoursAgo = epochToHours(created_utc);
-  const imageUrl = img ? img : `https://placehold.co/40?text=${source}`
+  const imageUrl = img ?? `https://placehold.co/40?text=${source}`;
   return (
     <div className="flex bg-white my-4 mx-2 sm:mx-auto items-start max-w-3xl rounded-xl border">
       <img className="h-48 w-48 rounded-tl-xl rounded-bl-xl" src={imageUrl} />
@@ -44,7 +44,7 @@ export const GameCard: FunctionComponent<GameCardProps> = ({
             Get This Game
           </ButtonLink>
           <ButtonLink
-            href={`https://reddit.com/${reddit_url}`}
+            href={reddit_url}
             color={ButtonColor.INDIGO}
             className="w-full"
           >
@@ -55,3 +55,5 @@ export const GameCard: FunctionComponent<GameCardProps> = ({
     </div>
   );
 };
+
+export default GameCard;

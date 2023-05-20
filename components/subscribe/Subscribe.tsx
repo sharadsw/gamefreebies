@@ -1,6 +1,6 @@
 import { ButtonColor, ButtonPrimary } from "../Buttons";
 
-export const Subscribe = () => {
+const Subscribe = () => {
   return (
     <div className="relative bg-white flex flex-col mx-2 sm:mx-auto my-12 p-8 justify-center items-start max-w-3xl rounded-xl border">
       <span className="rounded-br-xl rounded-bl-xl absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
@@ -29,3 +29,5 @@ export const Subscribe = () => {
     </div>
   );
 };
+
+export default Subscribe;

@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
-import { Subscribe } from "@/components/subscribe/Subscribe";
+import Subscribe from "@/components/subscribe/Subscribe";
 import { GamesProps } from "@/components/games/types";
-import { GameCard } from "@/components/games/GameCard";
-import { Footer } from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
+import GameCard from "@/components/games/GameCard";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import redis from "@/lib/redis";
 
 const inter = Inter({ subsets: ["latin"] });
