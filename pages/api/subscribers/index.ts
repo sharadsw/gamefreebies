@@ -8,7 +8,7 @@ import prisma from "../../../lib/prisma";
  *
  */
 
-/*  GET /api/subscribe
+/*  GET /api/subscribers
  *  Fetch a list of subscribers
  *  Query params:
  *    - confirmed: true/false

@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../../lib/prisma";
 
 /*
- *  ROUTE: /api/subscribe/:id
+ *  ROUTE: /api/subscribers/:id
  *  Methods:
  *      PUT: Confirms a subscriber unless query param `confirm` set to false
  *      DELETE: Unsubscribes an email

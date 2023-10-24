@@ -13,7 +13,7 @@ const Subscribe = () => {
     const data = { email: target.email.value };
     target.email.value = "";
     try {
-      const result = await axios.post("/api/subscribe", data);
+      const result = await axios.post("/api/subscribers", data);
       if (result.status === 201) {
         setHasSubscribed(true);
         setTimeout(() => setHasSubscribed(false), 1000);
