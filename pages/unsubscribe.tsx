@@ -26,7 +26,7 @@ export async function getServerSideProps(context: any) {
 
   try {
     await prisma.subscriber.delete({
-        where: { id: decoded.id },
+      where: { id: decoded.id },
     });
   } catch (error) {
     return { props: { error: true } };

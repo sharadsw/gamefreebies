@@ -16,7 +16,7 @@ import prisma from "../../../lib/prisma";
  */
 export default async function handle(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   try {
     switch (req.method) {

@@ -29,12 +29,12 @@ export async function getServerSideProps(context: any) {
 
   let confirmed = null;
   try {
-    confirmed = await prisma.subscriber.update({
+    confirmed = (await prisma.subscriber.update({
       where: { id: decoded.id },
       data: {
         confirmed: true,
       },
-    }) as subscriber;
+    })) as subscriber;
   } catch (error) {
     return { props: { email: null, error: true } };
   }

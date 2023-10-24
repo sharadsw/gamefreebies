@@ -9,12 +9,15 @@ import prisma from "../../../lib/prisma";
  */
 export default async function handle(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   const id = String(req.query.id);
 
   const confirmSubscriber = async (id: string) => {
-    const value = "confirmed" in req.query ? Boolean(JSON.parse(String(req.query.confirmed))) : true;
+    const value =
+      "confirmed" in req.query
+        ? Boolean(JSON.parse(String(req.query.confirmed)))
+        : true;
     try {
       const confirmed = await prisma.subscriber.update({
         where: { id: id },

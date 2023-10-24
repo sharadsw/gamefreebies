@@ -19,7 +19,7 @@ const Subscribe = () => {
         setTimeout(() => setHasSubscribed(false), 1000);
         const data = {
           id: result.data.id,
-          email: result.data.email
+          email: result.data.email,
         };
         await axios.post("/api/confirm-email", data);
       }

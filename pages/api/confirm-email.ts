@@ -8,7 +8,7 @@ import {
 
 export default async function handle(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (req.method !== "POST")
     res.status(405).send({ message: "Method Not Allowed" });

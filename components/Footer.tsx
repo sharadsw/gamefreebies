@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -12,16 +13,16 @@ const Footer = () => {
           <span>freebies © {new Date().getFullYear()}</span>
         </div>
         <span>
-          <a
+          <Link
             href="https://github.com/sharadsw/gamefreebies"
             className="text-slate-700 hover:text-slate-900 transition-colors"
           >
             <FontAwesomeIcon icon={faGithub} size="xl" />
-          </a>
+          </Link>
         </span>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

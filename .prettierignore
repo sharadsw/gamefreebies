@@ -1,0 +1,6 @@
+build
+coverage
+styles/*
+.eslintrc.json
+postcss.config.js
+tailwind.config.js

@@ -19,7 +19,11 @@ const GameCard: FunctionComponent<GameCardProps> = ({
   const imageUrl = img ?? `https://placehold.co/40?text=${source}`;
   return (
     <div className="flex bg-white my-4 mx-2 sm:mx-auto items-start max-w-3xl rounded-xl border">
-      <img className="h-48 w-48 rounded-tl-xl rounded-bl-xl" src={imageUrl} />
+      <img
+        className="h-48 w-48 rounded-tl-xl rounded-bl-xl"
+        src={imageUrl}
+        alt="Game thumbnail"
+      />
       <div className="h-48 w-full p-8 flex flex-col justify-evenly">
         <div className="flex justify-between">
           <span className="font-bold text-lg">{title}</span>
