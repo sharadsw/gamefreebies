@@ -10,7 +10,7 @@ type ButtonProps = {
   className?: string;
   isSubmit?: boolean;
   color: ButtonColor;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 type ButtonLinkProps = {

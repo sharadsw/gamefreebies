@@ -9,12 +9,12 @@ const Footer = () => {
       <div className="my-8 w-11/12 flex justify-between">
         <div>
           <Logo />
-          <span>freebies.gg © {new Date().getFullYear()}</span>
+          <span>freebies © {new Date().getFullYear()}</span>
         </div>
         <span>
           <a
-            href="https://www.github.com"
-            className="text-slate-800 hover:text-slate-600 transition-colors"
+            href="https://github.com/sharadsw/gamefreebies"
+            className="text-slate-700 hover:text-slate-900 transition-colors"
           >
             <FontAwesomeIcon icon={faGithub} size="xl" />
           </a>
