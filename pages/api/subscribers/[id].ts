@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../../lib/prisma";
+import { logger } from "@/lib/utils";
 
 /*
  *  ROUTE: /api/subscribers/:id
@@ -27,6 +28,7 @@ export default async function handle(
       });
       res.status(200).send(confirmed);
     } catch (error) {
+      logger.error({ data: req.body, error });
       res.status(400).send(error);
     }
   };
@@ -38,6 +40,7 @@ export default async function handle(
       });
       res.status(200).send(deleted);
     } catch (error) {
+      logger.error({ data: req.body, error });
       res.status(400).send(error);
     }
   };
@@ -59,6 +62,7 @@ export default async function handle(
     }
   } catch (error) {
     // Unprocessable Entity
+    logger.error({ data: req.body, error });
     res.status(422).send(error);
   }
 }

@@ -5,6 +5,7 @@ import {
   InvokeCommand,
   InvokeCommandInput,
 } from "@aws-sdk/client-lambda";
+import { logger } from "@/lib/utils";
 
 export default async function handle(
   req: NextApiRequest,
@@ -26,5 +27,6 @@ export default async function handle(
   const command = new InvokeCommand(input);
   const response = await client.send(command);
 
+  logger.error({ data: req.body }, "Confirm email sent");
   res.status(response.StatusCode || 200).send({ message: "lambda executed" });
 }

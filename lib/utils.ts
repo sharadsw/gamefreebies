@@ -1,4 +1,5 @@
 import * as jwt from "jsonwebtoken";
+import * as pino from "pino";
 
 declare module "jsonwebtoken" {
   export interface SubscriberJwtPayload extends jwt.JwtPayload {
@@ -19,3 +20,7 @@ export const subscriberFromJWT = (
     return undefined;
   }
 };
+
+export const logger = pino.pino({
+  level: "info",
+});
