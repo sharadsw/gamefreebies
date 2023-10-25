@@ -27,6 +27,6 @@ export default async function handle(
   const command = new InvokeCommand(input);
   const response = await client.send(command);
 
-  logger.error({ data: req.body }, "Confirm email sent");
+  logger.info({ data: req.body }, "Confirm email sent");
   res.status(response.StatusCode || 200).send({ message: "lambda executed" });
 }
