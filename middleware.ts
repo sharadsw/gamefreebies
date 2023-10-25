@@ -6,7 +6,7 @@ export function middleware(req: NextRequest) {
   const url = req.nextUrl;
   const { pathname } = url;
 
-  if (pathname.startsWith(`/api/subscribers`)) {
+  if (pathname.startsWith(`/api/subscribers`) && req.method === "GET") {
     if (
       !req.headers.get("referer")?.includes(process.env.SERVICE_URL as string)
     ) {
