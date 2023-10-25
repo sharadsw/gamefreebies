@@ -6,9 +6,8 @@ export function middleware(req: NextRequest) {
   const url = req.nextUrl;
   const { pathname } = url;
 
-  if (pathname.startsWith(`/api/`)) {
+  if (pathname.startsWith(`/api/subscribers`)) {
     if (
-      !req.headers.get("referer")?.includes(process.env.APP_URL as string) ||
       !req.headers.get("referer")?.includes(process.env.SERVICE_URL as string)
     ) {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
