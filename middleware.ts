@@ -20,15 +20,6 @@ export async function middleware(req: NextRequest) {
     params: req.nextUrl.searchParams,
   }, "Incoming request");
 
-  // Restrict usage on GET /api/subscribers
-  if (pathname.startsWith(`/api/subscribers`) && req.method === "GET") {
-    if (
-      !req.headers.get("referer")?.includes(process.env.SERVICE_URL as string)
-    ) {
-      return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
-    }
-  }
-
   return NextResponse.next();
 }
 
