@@ -12,6 +12,8 @@ export async function middleware(req: NextRequest) {
     // pass
   }
 
+  console.log(req);
+
   // Request logger
   logger.info({
     method: req.method,

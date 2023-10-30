@@ -3,7 +3,7 @@ import prisma from "../../../lib/prisma";
 import { logger } from "@/lib/utils";
 
 /*
- *  POST /api/subscribe
+ *  POST /api/subscribers
  *  Adds an unconfirmed user to the mailing list
  *  Request body: { email }
  *
